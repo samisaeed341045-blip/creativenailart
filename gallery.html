@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - NailArt</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-paint-brush"></i> Nail<span>Art</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="designsDropdown" role="button" data-bs-toggle="dropdown">
+                            Designs
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="kids.html">Kids Designs</a></li>
+                            <li><a class="dropdown-item" href="adults.html">Adult Designs</a></li>
+                            <li><a class="dropdown-item" href="faces.html">Faces</a></li>
+                            <li><a class="dropdown-item" href="geometric.html">Geometric</a></li>
+                            <li><a class="dropdown-item" href="flowers.html">Flowers</a></li>
+                            <li><a class="dropdown-item" href="festive.html">Festive</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="nailcare.html">Nail Care</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="feedback.html">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Nail Art Gallery</h1>
+            <p>Explore stunning nail art designs created by our community. Get inspired and share your own creations!</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Featured Designs</h2>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="galleryContainer">
+                <!-- Image 1 -->
+                <div class="gallery-item" data-category="flowers">
+                    <img src="flower 1.jfif" alt="Floral Nail Art" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h5 class="gallery-title">Spring Blossom</h5>
+                        <p class="gallery-category">Floral Design</p>
+                        <div class="gallery-icons">
+                            <span class="gallery-icon" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" data-title="Spring Blossom" data-category="Floral Design">
+                                <i class="fas fa-expand"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-heart"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-share"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="gallery-item" data-category="geometric">
+                    <img src="geo 1.jfif" alt="Geometric Nail Art" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h5 class="gallery-title">Modern Geometry</h5>
+                        <p class="gallery-category">Geometric Pattern</p>
+                        <div class="gallery-icons">
+                            <span class="gallery-icon" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="https://images.unsplash.com/photo-1607779097040-4b8a570d7b5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" data-title="Modern Geometry" data-category="Geometric Pattern">
+                                <i class="fas fa-expand"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-heart"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-share"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="gallery-item" data-category="festive">
+                    <img src="wear 2.jfif" alt="Festive Nail Art" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h5 class="gallery-title">Diwali Sparkle</h5>
+                        <p class="gallery-category">Festive Design</p>
+                        <div class="gallery-icons">
+                            <span class="gallery-icon" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="https://images.unsplash.com/photo-1604656853577-8e5dbf9b979a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" data-title="Diwali Sparkle" data-category="Festive Design">
+                                <i class="fas fa-expand"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-heart"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-share"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="gallery-item" data-category="kids">
+                    <img src="kids 1.jfif" alt="Kids Nail Art" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h5 class="gallery-title">Cartoon Characters</h5>
+                        <p class="gallery-category">Kids Design</p>
+                        <div class="gallery-icons">
+                            <span class="gallery-icon" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" data-title="Cartoon Characters" data-category="Kids Design">
+                                <i class="fas fa-expand"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-heart"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-share"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="gallery-item" data-category="adults">
+                    <img src="elders 1.jfif"alt="Elegant Nail Art" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h5 class="gallery-title">French Elegance</h5>
+                        <p class="gallery-category">Adult Design</p>
+                        <div class="gallery-icons">
+                            <span class="gallery-icon" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="https://images.unsplash.com/photo-1607779097040-4b8a570d7b5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" data-title="French Elegance" data-category="Adult Design">
+                                <i class="fas fa-expand"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-heart"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-share"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 6 -->
+                <div class="gallery-item" data-category="faces">
+                    <img src="face nail 1.jfif" alt="Face Nail Art" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h5 class="gallery-title">Emoji Faces</h5>
+                        <p class="gallery-category">Face Design</p>
+                        <div class="gallery-icons">
+                            <span class="gallery-icon" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="https://images.unsplash.com/photo-1604656853577-8e5dbf9b979a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" data-title="Emoji Faces" data-category="Face Design">
+                                <i class="fas fa-expand"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-heart"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-share"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 7 -->
+                <div class="gallery-item" data-category="flowers">
+                    <img src="flower 4.jfif" alt="Rose Nail Art" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h5 class="gallery-title">Roses & Vines</h5>
+                        <p class="gallery-category">Floral Design</p>
+                        <div class="gallery-icons">
+                            <span class="gallery-icon" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" data-title="Roses & Vines" data-category="Floral Design">
+                                <i class="fas fa-expand"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-heart"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-share"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="flowers">
+                    <img src="flower 3.jfif" alt="Rose Nail Art" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h5 class="gallery-title">Roses & Vines</h5>
+                        <p class="gallery-category">Floral Design</p>
+                        <div class="gallery-icons">
+                            <span class="gallery-icon" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" data-title="Roses & Vines" data-category="Floral Design">
+                                <i class="fas fa-expand"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-heart"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-share"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Image 8 -->
+                <div class="gallery-item" data-category="geometric">
+                    <img src="geo 4.jfif" alt="Abstract Nail Art" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h5 class="gallery-title">Abstract Lines</h5>
+                        <p class="gallery-category">Geometric Pattern</p>
+                        <div class="gallery-icons">
+                            <span class="gallery-icon" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-image="https://images.unsplash.com/photo-1607779097040-4b8a570d7b5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" data-title="Abstract Lines" data-category="Geometric Pattern">
+                                <i class="fas fa-expand"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-heart"></i>
+                            </span>
+                            <span class="gallery-icon">
+                                <i class="fas fa-share"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5">
+                <button class="btn btn-primary btn-lg" id="loadMoreBtn">
+                    <i class="fas fa-spinner me-2"></i> Load More Designs
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="modal fade lightbox-modal" id="lightboxModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-3 bg-white rounded-circle p-2" data-bs-dismiss="modal"></button>
+                    <img id="lightboxImage" src="" alt="" class="lightbox-img">
+                    <div class="lightbox-info">
+                        <h4 id="lightboxTitle"></h4>
+                        <p class="text-muted mb-2" id="lightboxCategory"></p>
+                        <p>This design was created using our premium nail art products. The intricate details showcase the skill and creativity of our community members.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <button class="btn btn-outline-primary me-2">
+                                    <i class="fas fa-download me-1"></i> Download
+                                </button>
+                                <button class="btn btn-outline-primary">
+                                    <i class="fas fa-shopping-cart me-1"></i> Buy Products
+                                </button>
+                            </div>
+                            <div class="text-muted">
+                                <i class="fas fa-eye me-1"></i> 1,245 views
+                                <i class="fas fa-heart ms-3 me-1"></i> 89 likes
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="footer-brand"><i class="fas fa-paint-brush"></i> Nail<span>Art</span></h5>
+                    <p class="mt-3">A step-by-step learning environment that simulates classroom and lab-based learning into actual implementation.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-title">Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="nailcare.html">Nail Care</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <ul class="list-unstyled contact-info">
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i> 123 Art Street, Design City, DC 10001
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2"></i> (555) 123-4567
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2"></i> info@nailart.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 NailArt. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed as part of eProject Learning Environment</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<div class="whatsapp-float">
+    <a href="https://wa.me/923196690458" target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

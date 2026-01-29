@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - NailArt</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-paint-brush"></i> Nail<span>Art</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="designsDropdown" role="button" data-bs-toggle="dropdown">
+                            Designs
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="kids.html">Kids Designs</a></li>
+                            <li><a class="dropdown-item" href="adults.html">Adult Designs</a></li>
+                            <li><a class="dropdown-item" href="faces.html">Faces</a></li>
+                            <li><a class="dropdown-item" href="geometric.html">Geometric</a></li>
+                            <li><a class="dropdown-item" href="flowers.html">Flowers</a></li>
+                            <li><a class="dropdown-item" href="festive.html">Festive</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nailcare.html">Nail Care</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="feedback.html">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Share Your Experience</h1>
+            <p>Your feedback helps us improve our services and create better nail art experiences for everyone.</p>
+        </div>
+    </section>
+
+    <!-- Feedback Form Section -->
+    <section class="feedback-section">
+        <div class="container">
+            <div class="feedback-form-container">
+                <h2 class="section-title">Submit Your Feedback</h2>
+                <form id="feedbackForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" id="name" required placeholder="Enter your full name">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" id="email" required placeholder="Enter your email">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="experience" class="form-label">Your Experience Level</label>
+                            <select class="form-select" id="experience">
+                                <option value="">Select your level</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                                <option value="professional">Professional</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Overall Rating -->
+                    <div class="rating-container mb-4">
+                        <label class="form-label">Overall Rating *</label>
+                        <div class="stars" id="ratingStars">
+                            <span class="star" data-value="1"><i class="far fa-star"></i></span>
+                            <span class="star" data-value="2"><i class="far fa-star"></i></span>
+                            <span class="star" data-value="3"><i class="far fa-star"></i></span>
+                            <span class="star" data-value="4"><i class="far fa-star"></i></span>
+                            <span class="star" data-value="5"><i class="far fa-star"></i></span>
+                        </div>
+                        <div class="rating-labels">
+                            <span>Poor</span>
+                            <span>Excellent</span>
+                        </div>
+                        <input type="hidden" id="rating" name="rating" required>
+                    </div>
+
+                    <!-- What did you like? -->
+                    <div class="mb-4">
+                        <label class="form-label">What did you like about our service? (Select all that apply)</label>
+                        <div class="checkbox-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="designs" id="likeDesigns">
+                                <label class="form-check-label" for="likeDesigns">
+                                    Nail Design Variety
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="tutorials" id="likeTutorials">
+                                <label class="form-check-label" for="likeTutorials">
+                                    Step-by-step Tutorials
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="products" id="likeProducts">
+                                <label class="form-check-label" for="likeProducts">
+                                    Quality Products
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="pricing" id="likePricing">
+                                <label class="form-check-label" for="likePricing">
+                                    Affordable Pricing
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="customer-service" id="likeService">
+                                <label class="form-check-label" for="likeService">
+                                    Customer Service
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="website" id="likeWebsite">
+                                <label class="form-check-label" for="likeWebsite">
+                                    User-friendly Website
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comments -->
+                    <div class="mb-4">
+                        <label for="comments" class="form-label">Your Comments *</label>
+                        <textarea class="form-control" id="comments" rows="5" required 
+                                  placeholder="Please share your detailed feedback, suggestions, or any issues you faced..."></textarea>
+                    </div>
+
+                    <!-- Would you recommend? -->
+                    <div class="mb-4">
+                        <label class="form-label">Would you recommend NailArt to others? *</label>
+                        <div class="d-flex gap-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="recommend" id="recommendYes" value="yes" required>
+                                <label class="form-check-label" for="recommendYes">
+                                    Yes, definitely
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="recommend" id="recommendMaybe" value="maybe">
+                                <label class="form-check-label" for="recommendMaybe">
+                                    Maybe
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="recommend" id="recommendNo" value="no">
+                                <label class="form-check-label" for="recommendNo">
+                                    Probably not
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg px-5">
+                            <i class="fas fa-paper-plane me-2"></i> Submit Feedback
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Others Are Saying</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "The eProject learning approach is amazing! I went from a complete beginner to creating professional designs in just 2 months."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Emma Wilson" class="author-img">
+                            <div class="author-info">
+                                <h5>Emma Wilson</h5>
+                                <p>Beginner Student</p>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "As a nail technician, I found the advanced tutorials extremely helpful. The product quality is top-notch and worth every penny!"
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sophia Chen" class="author-img">
+                            <div class="author-info">
+                                <h5>Sophia Chen</h5>
+                                <p>Professional Nail Artist</p>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "The customer service team is incredibly responsive. They helped me choose the perfect products for my skin tone and style."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Isabella Rossi" class="author-img">
+                            <div class="author-info">
+                                <h5>Isabella Rossi</h5>
+                                <p>Intermediate Level</p>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            How will my feedback be used?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Your feedback is extremely valuable to us. We use it to improve our tutorials, products, and customer service. Positive feedback helps us know what we're doing right, while constructive criticism helps us identify areas for improvement.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Is my feedback anonymous?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We respect your privacy. While we collect your name and email for verification purposes, we will never share your personal information publicly without your explicit consent. Testimonials are published only with permission.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            When can I expect a response?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We strive to respond to all feedback within 48 hours. For urgent matters, please contact our customer service team directly through the contact page.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            Can I update my feedback later?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, you can submit additional feedback at any time. We track feedback by email address, so new submissions from the same email will update your previous feedback.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="footer-brand"><i class="fas fa-paint-brush"></i> Nail<span>Art</span></h5>
+                    <p class="mt-3">A step-by-step learning environment that simulates classroom and lab-based learning into actual implementation.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="designs.html">Designs</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="nailcare.html">Nail Care</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-title">Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <ul class="list-unstyled contact-info">
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i> 123 Art Street, Design City, DC 10001
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2"></i> (555) 123-4567
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2"></i> info@nailart.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 NailArt. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed as part of eProject Learning Environment</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="whatsapp-float">
+    <a href="https://wa.me/923196690458" target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
